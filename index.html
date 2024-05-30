@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>NFA To DFA</title>
+</head>
+
+<body>
+  <main>
+    <div class="content1-row">
+      <!-- add transition -->
+
+      <div class="row">
+
+        <select id="stateFrom">
+          <option value="q0">q0</option>
+          <option value="q1">q1</option>
+          <option value="q2">q2</option>
+          <option value="q3">q3</option>
+        </select>
+
+        <input id="letterInput" size="3px" onchange="" />
+
+        <select id="stateTo">
+          <option value="q0">q0</option>
+          <option value="q1">q1</option>
+          <option value="q2">q2</option>
+          <option value="q3">q3</option>
+        </select>
+
+        <button onclick="addTransition(nfa)">Add transition</button>
+        <button onclick="clearTransitions()">Clear</button>
+
+      </div>
+
+      <div id="formalLanguage" class="col"></div>
+
+      <table id="table">
+        <tr>
+          <td> X </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td> q0 </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td> q1 </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </table>
+    </div>
+
+    
+    <div id="graph" class="graph"></div>
+    <button class="convert-button" id="convertButton" onclick="nfaToDfa(nfa)"><Nav></Nav>NFA</button>
+
+
+
+  </main>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
